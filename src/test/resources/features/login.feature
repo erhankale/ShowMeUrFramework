@@ -1,16 +1,16 @@
-Feature: User should login
+Feature: User should log in
 
   @loginPos @smoke
-  Scenario: user sign in an account
+  Scenario: user should log in an account
     Given user is on the main page
     When user should click on "Sign in" button
-    And user should sign in with valid credentials
+    And user should log in with valid credentials
     Then user should get the approval text
 
   @loginNeg @smoke
-  Scenario: user can not sign in with invalid credentials
+  Scenario: user can not log in with invalid credentials
     Given user is on the main page
     When user should click on "Sign in" button
-    And user should sign in with invalid credentials
+    And user use invalid credentials
     Then user get authentication fail message
 
