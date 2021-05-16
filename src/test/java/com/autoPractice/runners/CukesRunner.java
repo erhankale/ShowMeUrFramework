@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/autoPractice/step_definitions",
         dryRun = false,
-        tags = "@loginNeg"
+        tags = "@order"
 )
 public class CukesRunner {
 }

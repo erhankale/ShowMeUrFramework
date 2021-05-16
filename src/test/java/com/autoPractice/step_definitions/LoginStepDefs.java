@@ -7,20 +7,20 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import static org.junit.Assert.*;
 
-public class SigninStepDefs {
+public class LoginStepDefs {
 
     SigninPage signinPage = new SigninPage();
 
 
-    @And("user should sign in with valid credentials")
-    public void userShouldSignInWithValidCredentials() {
+    @And("user should log in with valid credentials")
+    public void userShouldLogInWithValidCredentials() {
         signinPage.inputEmail.sendKeys(ConfigurationReader.get("userMail"));
         signinPage.inputPass.sendKeys(ConfigurationReader.get("userPassword"));
         signinPage.loginBtn.click();
     }
 
-    @And("user should sign in with invalid credentials")
-    public void userShouldSignInWithInvalidCredentials() {
+    @And("user use invalid credentials")
+    public void userUseInvalidCredentials() {
         signinPage.inputEmail.sendKeys("userMail");
         signinPage.inputPass.sendKeys("userPassword");
         signinPage.loginBtn.click();
