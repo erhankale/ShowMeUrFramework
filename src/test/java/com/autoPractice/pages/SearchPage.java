@@ -5,6 +5,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class SearchPage extends BasePage{
 
-    @FindBy (xpath = "//div[@class='product-image-container']")
+    @FindBy (xpath = "//a[contains(@id,'color_')]")
     public WebElement item1;
 }

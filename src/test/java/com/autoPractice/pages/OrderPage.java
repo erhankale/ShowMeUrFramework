@@ -25,9 +25,31 @@ public class OrderPage extends BasePage{
     @FindBy(xpath="//a[contains(@title,'Proceed')]")
     public WebElement proceedBtn;
 
+    @FindBy(xpath="(//*[contains(text(),'Proceed')])[2]")
+    public WebElement proceedBtn2;
+
+    @FindBy(id="addressesAreEquals")
+    public WebElement addressCheckBox;
+
+    @FindBy(id="cgv")
+    public WebElement termsCheckBox;
+
+    @FindBy(xpath = "//*[contains(text(),'I confirm my order')]")
+    public WebElement confirmBtn;
+
+    @FindBy(css="p.alert.alert-success")
+    public WebElement orderConfirmationMessage;
+
     public WebElement selectColor(String str){
 
         WebElement element = Driver.get().findElement(By.xpath("//a[@title='"+str+"']"));
+
+        return element;
+    }
+
+    public WebElement selectPayment(String str){
+
+        WebElement element = Driver.get().findElement(By.xpath("(//*[contains(@title,'"+str+"')])"));
 
         return element;
     }
